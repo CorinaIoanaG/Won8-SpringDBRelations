@@ -16,7 +16,7 @@ public class MovieRating {
     @Id
     @GeneratedValue
     private Integer id;
-    @OneToOne
+    @OneToOne(mappedBy = "movieRating")
     @JsonIgnore
     private Movie movie;
     @Column

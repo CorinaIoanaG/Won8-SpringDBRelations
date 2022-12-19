@@ -23,9 +23,10 @@ public class Movie {
     private String name;
     @Column
     private int year;
-    @OneToOne(mappedBy = "rating", cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    @OneToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    @JsonIgnore
     private MovieRating movieRating;
-    @OneToMany(mappedBy = "text", cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    @OneToMany(mappedBy = "movie", cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JsonIgnore
     private List<Review> review;
     @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE})

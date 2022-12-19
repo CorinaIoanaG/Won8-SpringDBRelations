@@ -17,7 +17,7 @@ public class Actor {
     @Id
     @GeneratedValue
     private Integer id;
-    @ManyToMany(mappedBy = "actors")
+    @ManyToMany
     @JsonIgnore
     private List<Movie> movies;
     @Column

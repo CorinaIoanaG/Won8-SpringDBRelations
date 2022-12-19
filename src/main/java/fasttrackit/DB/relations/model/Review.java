@@ -19,7 +19,7 @@ public class Review {
     private Integer id;
     @ManyToOne
     @JsonIgnore
-    private List<Movie> movies;
+    private Movie movie;
     @Column
     private String text;
     @Column
